@@ -1,4 +1,4 @@
-# Starting point
+# imdos-ublue
 
 [![build-ublue](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml)
 
