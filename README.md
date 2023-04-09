@@ -46,12 +46,13 @@ After that run the following commands:
 - `just` - Show all tasks, more will be added in the future
 - `just bios` - Reboot into the system bios (Useful for dualbooting)
 - `just changelogs` - Show the changelogs of the pending update
-- Set up distroboxes for the following images:
-  - `just distrobox-boxkit`
-  - `just distrobox-debian`
-  - `just distrobox-opensuse`
-  - `just distrobox-ubuntu`
-- `just setup-flatpaks` - Install all of the flatpaks declared in recipe.yml
+- Various containers. These should be used to install apps not available as Flatpak, they share the user home directory.
+  - `just distrobox-boxkit`Alpine based toolbox image, very small, good for ephermal
+  - `just distrobox-debian` Unstable debian, rolling
+  - `just distrobox-opensuse` Optimised for distrobox, rolling
+  - `just distrobox-ubuntu` 22.04 based ubuntu toolbox
+  - `just toolbox-fedora` Fedora toolbox matching the system, optimised for and using toolbox
+- `just setup-flatpaks` - Install of flatseal and extension manager, recommended
 - `just setup-gaming` - Install Steam, Heroic Game Launcher, OBS Studio, Discord, Boatswain, Bottles, and ProtonUp-Qt. MangoHud is installed and enabled by default, hit right Shift-F12 to toggle
 - `just update` - Update rpm-ostree, flatpaks, and distroboxes in one command
 

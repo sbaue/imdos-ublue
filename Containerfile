@@ -8,7 +8,7 @@ FROM ${BASE_CONTAINER_URL}:${FEDORA_MAJOR_VERSION}
 COPY etc /etc
 # COPY usr /usr
 
-COPY recipe.yml /tmp/recipe.yml
+COPY recipe.yml /etc/recipe.yml
 
 # yq used in build.sh and the setup-flatpaks recipe to read the recipe.yml
 # copied from the official container image as it's not avaible as an rpm

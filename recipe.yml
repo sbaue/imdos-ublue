@@ -16,13 +16,6 @@ description: A starting point for further customization of uBlue images. Make yo
 rpms:
   - python3-pip # needed for yafti (the first boot installer)
   - gnome-tweaks
-#  - @virtulization
-  - virt-install
-  - libvirt-daemon-config-network
-  - libvirt-daemon-kvm
-  - qemu-kvm
-  - virt-manager
-  - virt-viewer
 
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
@@ -30,4 +23,3 @@ rpms:
 flatpaks:
   - org.gustavoperedo.FontDownloader
   - com.github.tchx84.Flatseal
-  - com.mattjakeman.ExtensionManager
