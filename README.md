@@ -4,7 +4,7 @@
 
 This is a modified startingpoint image of ublue(based in turn on Fedora Silverblue) designed to be customized to whatever you want, have GitHub build it for you, and then host it for you. You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
-The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to kinoite-nvidia(nvidia drivers) and adding needed stuff for virtualization. For now the image will be based on Kinoite 37 with a later update to Kinoite 38 planned for after official release. This update will be automatic and transparant for you if you are on this version.
+The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(nvidia drivers) and adding needed stuff for virtualization. For now the image will be based on Silverblue 37 with a later update to Silverblue 38 planned for after official release. This update will be automatic and transparant for you if you are on this version.
 
 For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
 
