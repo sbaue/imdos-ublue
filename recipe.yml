@@ -14,7 +14,6 @@ description: A starting point for further customization of uBlue images. Make yo
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
-  - python3-pip # needed for yafti (the first boot installer)
   - gnome-tweaks
 
 # These Flatpaks (from flathub) will be available for install on boot
