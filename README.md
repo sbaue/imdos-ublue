@@ -33,7 +33,11 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## Installation of user software
 
-Your first stop should be Flatpaks, use them whenever possible. If a software is not available in Flathub you pick one of the distroboxes mentioned below and install the software within that. In case you have a special software(like drivers) or have been instructed to do so by a reasonably competent person you can also install software via package layering by following the [Getting Started](https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/) guide from Fedora.
+I highly recommend your first step to be opening a terminal and running `just setup-flatpaks` these are optional but highly recommended flatpaks that help you finding and installing gnome extensions and managing permissions for flatpaks. Your second step should probably picking a webbrowser you fancy from the Software app.
+
+In generel your first choice should be Flatpaks, use them whenever possible. If a software is not available in Flathub you pick one of the distroboxes mentioned below and install the software within that. In case you have a special software(like drivers) or have been instructed to do so by a reasonably competent person you can also install software via package layering by following the [Getting Started](https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/) guide from Fedora.
+
+The reason for that is simply the update process. Layering has the highest likelihood of introducing problems and finding unique and interesting problems. They will break things on YOUR end, you want things to break on THIS end though because a broken build will never be pushed to your system.
 
 ## Just
 
