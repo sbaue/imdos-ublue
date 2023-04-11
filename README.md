@@ -2,23 +2,17 @@
 
 [![build-ublue](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml)
 
-This is a modified startingpoint image of ublue(based in turn on Fedora Silverblue) designed to be customized to whatever you want, have GitHub build it for you, and then host it for you. You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
+This is a modified startingpoint image of ublue(based in turn on Fedora Silverblue) designed to be customized to whatever you want, have GitHub build it for you, and then host it for you. You can then tell your computer to follow this image.
 
-The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(nvidia drivers) and adding needed stuff for virtualization. For now the image will be based on Silverblue 37 with a later update to Silverblue 38 planned for after official release. This update will be automatic and transparant for you if you are on this version.
+The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(nvidia drivers), and removing yafti. For now the image will be based on Silverblue 37 with a later update to Silverblue 38 planned for after official release. This update will be automatic and transparant for you if you are on this version.
 
 For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
 
 ## Customization
 
-I recommend using ublue/startingpoint image as a base for modifications, this image might change unexpectedly as I try things out.
+I recommend using [ublue/startingpoint](https://github.com/ublue-os/startingpoint)] image as a base for your own modified images, this image might change unexpectedly as I try things out.
 
-### [yafti](https://github.com/ublue-os/yafti/)
-
-`yafti` is the uBlue firstboot installer, and it's configuration can be found in `/etc/yafti.yml`. It includes an optional selection of Flatpaks to install, with a new group added for the Flatpaks declared in `recipe.yml`. You can look at what's done in the config and modify it to your liking.
-
-The files `/etc/profile.d/ublue-firstboot.sh` and `/etc/skel.d/.config/autostart/ublue-firstboot.desktop` set up `yafti` so that it starts on boot, so if you wish to retain that functionality those files shouldn't be touched.
-
-## Installation
+## Installation of base system
 
 > **Warning**
 > This is an experimental feature and should not be used in production, try it in a VM for a while!
@@ -36,6 +30,10 @@ sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/sbaue/imdos-ublue:2023
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `release.yml`, so you won't get accidentally updated to the next major version.
+
+## Installation of user software
+
+Your first stop should be Flatpaks, use them whenever possible. If a software is not available in Flathub you pick one of the distroboxes mentioned below and install the software within that. In case you have a special software(like drivers) or have been instructed to do so by a reasonably competent person you can also install software via package layering by following the [Getting Started](https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/) guide from Fedora.
 
 ## Just
 
