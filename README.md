@@ -10,7 +10,7 @@ For more info, check out the [uBlue homepage](https://ublue.it/) and the [main u
 
 ## Customization
 
-I recommend using [ublue/startingpoint](https://github.com/ublue-os/startingpoint)] image as a base for your own modified images, this image might change unexpectedly as I try things out.
+I recommend using [ublue/startingpoint](https://github.com/ublue-os/startingpoint) image as a base for your own modified images, this image might change unexpectedly as I try things out.
 
 ## Installation of base system
 
