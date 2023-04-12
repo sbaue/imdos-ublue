@@ -33,7 +33,7 @@ setup-flatpaks:
   flatpaks=$(yq '.flatpaks[]' < /etc/recipe.yml)
   for pkg in $flatpaks; do \
       echo "Installing: ${pkg}" && \
-      flatpak install --user --noninteractive flathub $pkg; \
+      flatpak install --noninteractive flathub $pkg; \
   done
 
 # How is this different from just installing a pwa supporting browser alternative?
@@ -44,7 +44,7 @@ setup-flatpaks:
 
 setup-gaming:
   echo 'Setting up gaming experience ... lock and load.'
-  flatpak install -y --user \\
+  flatpak install -y \\
   com.discordapp.Discord \\
   com.feaneron.Boatswain \\
   org.freedesktop.Platform.VulkanLayer.MangoHud//22.08 \\
@@ -58,9 +58,9 @@ setup-gaming:
   com.valvesoftware.Steam \\
   com.valvesoftware.Steam.Utility.gamescope \\
   net.davidotek.pupgui2
-  flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications 
-  flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam 
-  flatpak override --user --env=MANGOHUD=1 com.heroicgameslauncher.hgl 
+  flatpak override com.usebottles.bottles --filesystem=xdg-data/applications 
+  flatpak override --env=MANGOHUD=1 com.valvesoftware.Steam 
+  flatpak override --env=MANGOHUD=1 com.heroicgameslauncher.hgl 
  
 update:
   rpm-ostree update
