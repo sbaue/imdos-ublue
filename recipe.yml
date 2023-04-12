@@ -20,5 +20,5 @@ rpms:
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
 flatpaks:
-  - org.gustavoperedo.FontDownloader
+  - com.mattjakeman.ExtensionManager
   - com.github.tchx84.Flatseal
