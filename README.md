@@ -2,11 +2,15 @@
 
 [![build-ublue](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml)
 
-This is a modified startingpoint image of ublue(based in turn on Fedora Silverblue) designed to provide a very basic Gnome installation and running nvidia drivers by default.
-
-The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(for nvidia drivers), and removing yafti. For now the image will be based on Silverblue 37 with a later update to Silverblue 38 planned for after official release. This update will be automatic and transparant for you if you are on this version.
+This is a modified image of ublue(based in turn on Fedora Silverblue) designed to provide a very basic Gnome installation and running nvidia drivers by default.
 
 For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
+
+## Version
+
+This is running on Silverblue 38 package base.
+
+The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(for nvidia drivers), and removing yafti. 
 
 ## Customization
 
