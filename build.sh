@@ -8,6 +8,6 @@ echo "-- Applying overlay as defined in rpm_overlay --"
 echo "---"
 
 echo "-- Applying layering as defined in rpm_install --"
-    echo "Installing: $RPM_IN
+    echo "Installing: $RPM_IN"
     rpm-ostree install $RPM_IN
 echo "---"
