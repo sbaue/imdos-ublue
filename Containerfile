@@ -10,6 +10,8 @@ COPY etc /etc
 
 COPY ${RECIPE} /tmp/ublue-recipe.yml
 COPY ${RECIPE} /etc/recipe.yml
+COPY rpm_overlay /tmp/rpm_overlay
+COPY rpm_install /tmp/rpm_install
 
 # yq used in build.sh and the setup-flatpaks recipe to read the recipe.yml
 # copied from the official container image as it's not avaible as an rpm
