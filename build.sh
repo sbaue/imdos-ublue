@@ -1,10 +1,16 @@
 #!/bin/bash
-# remove the default firefox (from fedora) in favor of the flatpak
-rpm-ostree override remove firefox firefox-langpacks
 
-echo "-- Installing RPMs defined in recipe.yml --"
-rpm_packages=$(yq '.rpms[]' < /tmp/ublue-recipe.yml)
-for pkg in $(echo -e "$rpm_packages"); do \
+echo "-- Applying overlay as defined in rpm_overlay --"
+rpm_overlay=$(cat rpm_overlay | egrep -v "(^#.*|^$)")
+for pkg in $(echo -e "$rpm_overlay"); do \
+    echo "Installing: ${pkg}" && \
+    rpm-ostree override remove $pkg; \
+done
+echo "---"
+
+echo "-- Applying layering as defined in rpm_install --"
+rpm_install=$(cat rpm_install | egrep -v "(^#.*|^$)")
+for pkg in $(echo -e "$rpm_install"); do \
     echo "Installing: ${pkg}" && \
     rpm-ostree install $pkg; \
 done

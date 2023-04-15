@@ -1,4 +1,0 @@
-## This file contains the desired ostree layering
-
-remove nano firefox firefox-langpacks
-install fish zsh

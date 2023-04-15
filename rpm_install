@@ -1,0 +1,3 @@
+## This file contains the desired ostree layering, this is perfectly capable of nuking your system, @spec files are allowed
+
+fish gnome-tweaks vim
