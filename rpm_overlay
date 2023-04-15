@@ -1,3 +1,3 @@
-## Applying the overlay as defined in rpm_overlay
+## Applying the overlay as defined in rpm_overlay, this isn't well supported by ostree as you have to specify not only a package to be removed but also it's dependencies. I advise crafting the string of packages in a running system with 'ostree override remove --dry-run' until you find one that doesn't errors. This runs before rpm_install.
 
-firefox nano
+firefox firefox-langpacks
