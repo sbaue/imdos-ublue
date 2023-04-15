@@ -1,17 +1,13 @@
 #!/bin/bash
 
+RPM_OL=$(cat /tmp/rpm_overlay | egrep -v "(^#.*|^$)")
+RPM_IN=$(cat /tmp/rpm_install | egrep -v "(^#.*|^$)")
+
 echo "-- Applying overlay as defined in rpm_overlay --"
-rpm_overlay=$(cat /tmp/rpm_overlay | egrep -v "(^#.*|^$)")
-for pkg in $(echo -e "$rpm_overlay"); do \
-    echo "Installing: ${pkg}" && \
-    rpm-ostree override remove $pkg; \
-done
+    rpm-ostree override remove $RPM_OL
 echo "---"
 
 echo "-- Applying layering as defined in rpm_install --"
-rpm_install=$(cat /tmp/rpm_install | egrep -v "(^#.*|^$)")
-for pkg in $(echo -e "$rpm_install"); do \
-    echo "Installing: ${pkg}" && \
-    rpm-ostree install $pkg; \
-done
+    echo "Installing: $RPM_IN
+    rpm-ostree install $RPM_IN
 echo "---"
