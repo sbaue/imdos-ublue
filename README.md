@@ -10,7 +10,7 @@ For more info, check out the [uBlue homepage](https://ublue.it/) and the [main u
 
 This is running on Silverblue 38 package base.
 
-The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(for nvidia drivers), and removing yafti. 
+The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(for nvidia drivers), and removing yafti. It adds some simple files for adding and removing rpm based packages from the base image.
 
 ## Customization
 
@@ -39,9 +39,18 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 I highly recommend your first step to be opening a terminal and running `just setup-flatpaks` these are optional but highly recommended flatpaks that help you finding and installing gnome extensions and managing permissions for flatpaks. Your second step should probably picking a webbrowser you fancy from the Software app.
 
-In generel your first choice should be Flatpaks, use them whenever possible. If a software is not available in Flathub you pick one of the distroboxes mentioned below and install the software within that. In case you have a special software(like drivers) or have been instructed to do so by a reasonably competent person you can also install software via package layering by following the [Getting Started](https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/) guide from Fedora.
+When you begin to customise the system for your workflow you should choose your package sources according to these priorities:
 
-The reason for that is simply the update process. Layering has the highest likelihood of introducing problems and finding unique and interesting problems. They will break things on YOUR end, you want things to break on THIS end though because a broken build will never be pushed to your system.
+1. Flatpaks 
+Use them whenever available. This is your bread and butter and we run the official [Flathub Repository](https://flathub.org/home). You have a problem with one of them, everyone has that problem, so you are more likely to find help.
+
+2. Podman container
+
+These are managed by [distrobox](https://github.com/89luca89/distrobox) here. You find a few exampes below. They are little containers containing normal linux distributions, including their fully functional package managers. You can use the [Podman Desktop](https://flathub.org/apps/details/io.podman_desktop.PodmanDesktop) flatpak available in Software to manage them. Just delete the box if you messed it up. Keep in mind though that they have write access and use your home directory.
+
+3. RPM-OStree
+
+If nothing else works you can change the base system directly. One of the reasons this repo exists is so that you DON'T have to do this. Because anything can happen. [Silverblue documentation(https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/#package-layering)] explains it's use a bit. 
 
 ## Just
 
