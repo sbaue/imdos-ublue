@@ -41,15 +41,13 @@ I highly recommend your first step to be opening a terminal and running `just se
 
 When you begin to customise the system for your workflow you should choose your package sources according to these priorities:
 
-1. Flatpaks 
+1. Flatpaks: 
 Use them whenever available. This is your bread and butter and we run the official [Flathub Repository](https://flathub.org/home). You have a problem with one of them, everyone has that problem, so you are more likely to find help.
 
-2. Podman container
-
+2. Podman container:
 These are managed by [distrobox](https://github.com/89luca89/distrobox) here. You find a few exampes below. They are little containers containing normal linux distributions, including their fully functional package managers. You can use the [Podman Desktop](https://flathub.org/apps/details/io.podman_desktop.PodmanDesktop) flatpak available in Software to manage them. Just delete the box if you messed it up. Keep in mind though that they have write access and use your home directory.
 
-3. RPM-OStree
-
+3. RPM-OStree:
 If nothing else works you can change the base system directly. One of the reasons this repo exists is so that you DON'T have to do this. Because anything can happen. [Silverblue documentation(https://docs.fedoraproject.org/en-US/fedora-silverblue/getting-started/#package-layering)] explains it's use a bit. 
 
 ## Just
