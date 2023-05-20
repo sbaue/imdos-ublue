@@ -3,7 +3,7 @@ name: imdos-ublue
 # The native container image to build on top of
 # images. 
 # Warning: Non-uBlue images might function unexpectly
-base-container: ghcr.io/ublue-os/silverblue-nvidia
+base-container: ghcr.io/ublue-os/cinnamon-nvidia
 # What fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated
 # to the next major version assuming the image you're using as your base container
@@ -16,5 +16,4 @@ description: A starting point for further customization of uBlue images. Make yo
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
 flatpaks:
-  - com.mattjakeman.ExtensionManager
   - com.github.tchx84.Flatseal
