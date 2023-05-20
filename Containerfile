@@ -1,5 +1,5 @@
 ARG FEDORA_MAJOR_VERSION=37
-ARG BASE_CONTAINER_URL=ghcr.io/ublue-os/silverblue-main
+ARG BASE_CONTAINER_URL=ghcr.io/ublue-os/cinnamon-nvidia
 
 FROM ${BASE_CONTAINER_URL}:${FEDORA_MAJOR_VERSION}
 ARG RECIPE
