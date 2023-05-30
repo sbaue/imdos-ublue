@@ -8,9 +8,9 @@ For more info, check out the [uBlue homepage](https://ublue.it/) and the [main u
 
 ## Version
 
-This is running on Silverblue 38 package base.
+This is running on Kinoite 38 package base.
 
-The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to silverblue-nvidia(for nvidia drivers), and removing yafti. It adds some simple files for adding and removing rpm based packages from the base image.
+The base changes of this version is trimming down the preinstalled Flatpaks, changing the base to kinoite-nvidia(for nvidia drivers), and removing yafti. It adds some simple files for adding and removing rpm based packages from the base image.
 
 ## Customization
 
