@@ -2,7 +2,7 @@
 
 [![build-ublue](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/sbaue/imdos-ublue/actions/workflows/build.yml)
 
-This is a modified image of ublue(based in turn on Fedora Silverblue) designed to provide a very basic Cinnamon installation and running nvidia drivers by default.
+This is a modified image of ublue(based in turn on Fedora Silverblue) designed to provide a very basic Plasma installation and running nvidia drivers by default.
 
 For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
 
